@@ -17,7 +17,8 @@ export DEPLOY_SYS_PYTHON=1
 # Deploy dependencies
 quick-sharun /usr/bin/blender* /usr/share/blender
 
-# Additional changes can be done in between here
+# blender needs the files of its share directory relative to it
+ln -sr ./AppDir/share/blender/* ./AppDir/bin
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
