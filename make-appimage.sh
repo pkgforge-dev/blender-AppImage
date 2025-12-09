@@ -15,7 +15,15 @@ export DEPLOY_VULKAN=1
 export DEPLOY_SYS_PYTHON=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/blender* /usr/share/blender
+quick-sharun \
+	/usr/bin/blender*         \
+	/usr/share/blender        \
+	/usr/lib/libssl.so*       \
+	/usr/lib/libtcm.so*       \
+	/usr/lib/libcblas.so*     \
+	/usr/lib/liblapack.so*    \
+	/usr/lib/libopenblas.so*  \
+	/usr/lib/libquadmath.so*
 
 # blender needs the files of its share directory relative to it
 ln -sr ./AppDir/share/blender/* ./AppDir/bin
