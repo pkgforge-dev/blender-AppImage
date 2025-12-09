@@ -23,7 +23,9 @@ quick-sharun \
 	/usr/lib/libcblas.so*     \
 	/usr/lib/liblapack.so*    \
 	/usr/lib/libopenblas.so*  \
-	/usr/lib/libquadmath.so*
+	/usr/lib/libquadmath.so*  \
+	/usr/lib/libdecor-0.so*   \
+	/usr/lib/libdecor/*/libdecor-cairo.so*
 
 # blender needs the files of its share directory relative to it
 ln -sr ./AppDir/share/blender/* ./AppDir/bin
